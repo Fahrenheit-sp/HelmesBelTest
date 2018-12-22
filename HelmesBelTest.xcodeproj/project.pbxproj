@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		40C75DD621CE2FBC005E344E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C75DD521CE2FBC005E344E /* AppDelegate.swift */; };
-		40C75DD821CE2FBC005E344E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C75DD721CE2FBC005E344E /* ViewController.swift */; };
 		40C75DDB21CE2FBC005E344E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40C75DD921CE2FBC005E344E /* Main.storyboard */; };
 		40C75DDD21CE2FBE005E344E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40C75DDC21CE2FBE005E344E /* Assets.xcassets */; };
 		40C75DE021CE2FBE005E344E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40C75DDE21CE2FBE005E344E /* LaunchScreen.storyboard */; };
@@ -28,7 +27,6 @@
 /* Begin PBXFileReference section */
 		40C75DD221CE2FBC005E344E /* HelmesBelTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelmesBelTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40C75DD521CE2FBC005E344E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		40C75DD721CE2FBC005E344E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		40C75DDA21CE2FBC005E344E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		40C75DDC21CE2FBE005E344E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40C75DDF21CE2FBE005E344E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -78,7 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				40C75DD521CE2FBC005E344E /* AppDelegate.swift */,
-				40C75DD721CE2FBC005E344E /* ViewController.swift */,
 				40C75DD921CE2FBC005E344E /* Main.storyboard */,
 				40C75DDC21CE2FBE005E344E /* Assets.xcassets */,
 				40C75DDE21CE2FBE005E344E /* LaunchScreen.storyboard */,
@@ -106,6 +103,7 @@
 				40C75DCE21CE2FBC005E344E /* Sources */,
 				40C75DCF21CE2FBC005E344E /* Frameworks */,
 				40C75DD021CE2FBC005E344E /* Resources */,
+				40C75DF521CE3038005E344E /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -192,12 +190,32 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		40C75DF521CE3038005E344E /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\nexit 1\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		40C75DCE21CE2FBC005E344E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40C75DD821CE2FBC005E344E /* ViewController.swift in Sources */,
 				40C75DD621CE2FBC005E344E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,6 +381,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 66W9KV8MC3;
 				INFOPLIST_FILE = HelmesBelTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -381,6 +400,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 66W9KV8MC3;
 				INFOPLIST_FILE = HelmesBelTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
