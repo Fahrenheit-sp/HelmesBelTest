@@ -8,8 +8,8 @@
 
 import Foundation
 
-protocol Product {
-  var name: String {get}
-  var price: Decimal {get}
-  var unit: String {get}
+struct Product: Hashable {
+  let name: String
+  let price: Decimal
+  let unit: String
 }

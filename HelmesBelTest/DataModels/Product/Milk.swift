@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct Milk: Product {
-  let name: String = "Milk"
-  let price: Decimal = 1.30
-  let unit: String = "bottle"
-}
+//struct Milk: Product {
+//  let name: String = "Milk"
+//  let price: Decimal = 1.30
+//  let unit: String = "bottle"
+//}

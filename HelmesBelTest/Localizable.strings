@@ -8,3 +8,9 @@
 
 /* Currencies */
 "currency.usd" = "USD";
+
+/* Titles */
+"products.list" = "Products list";
+
+/* Units */
+"price.per" = " per ";
