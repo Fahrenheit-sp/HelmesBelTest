@@ -14,7 +14,7 @@ final class BasketViewModel: TableViewDataSource {
   private let basket: Basket
   private var currency: Currency
   
-  init(basket: Basket, currency: Currency) {
+  init(basket: Basket, currency: Currency = Currency.usd) {
     self.basket = basket
     self.currency = currency
     composeDataSource()

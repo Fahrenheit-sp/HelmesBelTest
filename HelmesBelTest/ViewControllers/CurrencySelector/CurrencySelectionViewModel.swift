@@ -29,10 +29,10 @@ final class CurrencySelectorViewModel: TableViewDataSource {
       switch result {
       case .success(let response):
         self?.currencies = response.currencies
-        print(response.currencies)
         self?.composeDataSource()
         completion(nil)
-      case .failure(let error): completion(error)
+      case .failure(let error):
+        completion(error)
       }
     }
   }

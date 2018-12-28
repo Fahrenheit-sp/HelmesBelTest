@@ -25,7 +25,8 @@ final class MainCoordinator: Coordinator {
   
   func showBasket(_ basket: Basket) {
     let basketController = BasketViewController.createInstanceFromStoryboard(named: "Basket")
-    basketController.viewModel = BasketViewModel(basket: basket, currency: Currency.usd)
+    basketController.loadViewIfNeeded()
+    basketController.viewModel = BasketViewModel(basket: basket)
     basketController.coordinator = self
     navigationController.pushViewController(basketController, animated: true)
   }
