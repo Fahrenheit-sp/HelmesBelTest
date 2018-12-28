@@ -11,16 +11,29 @@ import Foundation
 final class CurrencySelectorViewModel: TableViewDataSource {
   var dataSource: DataSource = ArrayDataSource(items: [])
   
-  private let service: ApiService
-  private var currencies: [Currency] = [USD()]
+  private let service: CurrencyService
+  private var currencies: [Currency] = [Currency.usd]
   
-  init(service: ApiService = ApiService.default) {
+  init(service: CurrencyService = ApiService.default) {
     self.service = service
+    composeDataSource()
+  }
+  
+  private func composeDataSource() {
     let models = currencies.map {CurrencyCellViewModel(currency: $0)}
     dataSource = ArrayDataSource(items: models)
   }
   
   func getCurrenciesList(completion: @escaping (Error?) -> Void) {
-    
+    service.getCurrenciesList { [weak self] (result) in
+      switch result {
+      case .success(let response):
+        self?.currencies = response.currencies
+        print(response.currencies)
+        self?.composeDataSource()
+        completion(nil)
+      case .failure(let error): completion(error)
+      }
+    }
   }
 }

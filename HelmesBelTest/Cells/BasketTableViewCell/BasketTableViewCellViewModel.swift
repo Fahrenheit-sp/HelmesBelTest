@@ -36,7 +36,7 @@ struct BasketTableViewCellViewModel: BindableCellViewModel {
   }
   
   var totalPrice: String {
-    let price = product.price * Decimal(numberOfProducts) * currency.rate
+    let price = product.price * Double(numberOfProducts) * currency.rate
     return String(describing: price)
   }
   

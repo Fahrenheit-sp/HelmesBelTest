@@ -25,13 +25,16 @@
 		4037818921D615D10016957F /* CurrencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4037818721D615D10016957F /* CurrencyTableViewCell.swift */; };
 		4037818A21D615D10016957F /* CurrencyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4037818821D615D10016957F /* CurrencyTableViewCell.xib */; };
 		4037818C21D616690016957F /* CurrencyCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4037818B21D616690016957F /* CurrencyCellViewModel.swift */; };
+		4037818E21D619470016957F /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4037818D21D619470016957F /* UIViewController+Alert.swift */; };
+		4037819021D61A5B0016957F /* URLContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4037818F21D61A5B0016957F /* URLContainer.swift */; };
+		4037819221D61BAC0016957F /* CurrencyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4037819121D61BAC0016957F /* CurrencyService.swift */; };
+		4037819521D624570016957F /* CurrencyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4037819421D624570016957F /* CurrencyResponse.swift */; };
 		40C75DD621CE2FBC005E344E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C75DD521CE2FBC005E344E /* AppDelegate.swift */; };
 		40C75DDB21CE2FBC005E344E /* ProductsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40C75DD921CE2FBC005E344E /* ProductsList.storyboard */; };
 		40C75DDD21CE2FBE005E344E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40C75DDC21CE2FBE005E344E /* Assets.xcassets */; };
 		40C75DE021CE2FBE005E344E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40C75DDE21CE2FBE005E344E /* LaunchScreen.storyboard */; };
 		40C75DEB21CE2FBE005E344E /* HelmesBelTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C75DEA21CE2FBE005E344E /* HelmesBelTestTests.swift */; };
 		40C75DF821CE30CC005E344E /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C75DF721CE30CC005E344E /* Product.swift */; };
-		40C75E0421CE332F005E344E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C75E0321CE332F005E344E /* Constants.swift */; };
 		40C75E0621CE33C1005E344E /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C75E0521CE33C1005E344E /* Currency.swift */; };
 		40C75E0821CE348B005E344E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 40C75E0721CE348B005E344E /* Localizable.strings */; };
 		40C75E0E21CE3539005E344E /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C75E0D21CE3539005E344E /* String+Localization.swift */; };
@@ -78,6 +81,10 @@
 		4037818721D615D10016957F /* CurrencyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewCell.swift; sourceTree = "<group>"; };
 		4037818821D615D10016957F /* CurrencyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrencyTableViewCell.xib; sourceTree = "<group>"; };
 		4037818B21D616690016957F /* CurrencyCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCellViewModel.swift; sourceTree = "<group>"; };
+		4037818D21D619470016957F /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		4037818F21D61A5B0016957F /* URLContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLContainer.swift; sourceTree = "<group>"; };
+		4037819121D61BAC0016957F /* CurrencyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyService.swift; sourceTree = "<group>"; };
+		4037819421D624570016957F /* CurrencyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyResponse.swift; sourceTree = "<group>"; };
 		40C75DD221CE2FBC005E344E /* HelmesBelTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelmesBelTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40C75DD521CE2FBC005E344E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40C75DDA21CE2FBC005E344E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ProductsList.storyboard; sourceTree = "<group>"; };
@@ -88,7 +95,6 @@
 		40C75DEA21CE2FBE005E344E /* HelmesBelTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelmesBelTestTests.swift; sourceTree = "<group>"; };
 		40C75DEC21CE2FBE005E344E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40C75DF721CE30CC005E344E /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
-		40C75E0321CE332F005E344E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		40C75E0521CE33C1005E344E /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		40C75E0721CE348B005E344E /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		40C75E0D21CE3539005E344E /* String+Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
@@ -167,9 +173,12 @@
 		4037817821D60F070016957F /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				4037819321D6244A0016957F /* Responses */,
 				4037817921D610BF0016957F /* ApiService.swift */,
 				4037817B21D611860016957F /* ApiError.swift */,
 				4037817D21D611D20016957F /* ReponseDecoder.swift */,
+				4037818F21D61A5B0016957F /* URLContainer.swift */,
+				4037819121D61BAC0016957F /* CurrencyService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -192,6 +201,14 @@
 				4037818B21D616690016957F /* CurrencyCellViewModel.swift */,
 			);
 			path = CurrencyTableViewCell;
+			sourceTree = "<group>";
+		};
+		4037819321D6244A0016957F /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				4037819421D624570016957F /* CurrencyResponse.swift */,
+			);
+			path = Responses;
 			sourceTree = "<group>";
 		};
 		40C75DC921CE2FBC005E344E = {
@@ -221,7 +238,6 @@
 				40C75E3321CE3E4E005E344E /* Utils */,
 				40C75E1421CE3785005E344E /* ViewControllers */,
 				40C75E0A21CE34C6005E344E /* Extensions */,
-				40C75E0221CE3320005E344E /* Settings */,
 				40C75DF621CE30BA005E344E /* DataModels */,
 				40C75DD521CE2FBC005E344E /* AppDelegate.swift */,
 				40C75DDC21CE2FBE005E344E /* Assets.xcassets */,
@@ -252,18 +268,11 @@
 			path = DataModels;
 			sourceTree = "<group>";
 		};
-		40C75E0221CE3320005E344E /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				40C75E0321CE332F005E344E /* Constants.swift */,
-			);
-			path = Settings;
-			sourceTree = "<group>";
-		};
 		40C75E0A21CE34C6005E344E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				40C75E0D21CE3539005E344E /* String+Localization.swift */,
+				4037818D21D619470016957F /* UIViewController+Alert.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -449,7 +458,11 @@
 			files = (
 				40C75E3121CE3E49005E344E /* DataSource.swift in Sources */,
 				4037817521D607690016957F /* Coordinator.swift in Sources */,
+				4037818E21D619470016957F /* UIViewController+Alert.swift in Sources */,
+				4037819021D61A5B0016957F /* URLContainer.swift in Sources */,
 				40C75DD621CE2FBC005E344E /* AppDelegate.swift in Sources */,
+				4037819221D61BAC0016957F /* CurrencyService.swift in Sources */,
+				4037819521D624570016957F /* CurrencyResponse.swift in Sources */,
 				40C75E3B21CE40BA005E344E /* ProductTableViewCell.swift in Sources */,
 				4037816721D5FFE10016957F /* BasketViewModel.swift in Sources */,
 				40C75DF821CE30CC005E344E /* Product.swift in Sources */,
@@ -471,7 +484,6 @@
 				4037818521D614F90016957F /* CurrencySelectionViewModel.swift in Sources */,
 				40C75E1821CE37AE005E344E /* ProductsListViewController.swift in Sources */,
 				4037816B21D6000A0016957F /* BasketTableViewCell.swift in Sources */,
-				40C75E0421CE332F005E344E /* Constants.swift in Sources */,
 				40C75E3521CE3F93005E344E /* ProductsListViewModel.swift in Sources */,
 				40C75E2E21CE3E49005E344E /* TableViewDataSource.swift in Sources */,
 				4037817C21D611860016957F /* ApiError.swift in Sources */,

@@ -31,7 +31,7 @@ struct ProductsFabric {
     }
   }
   
-  static func createProduct(named name: String, price: Decimal, unit: String) -> Product {
+  static func createProduct(named name: String, price: Double, unit: String) -> Product {
     return Product(name: name, price: price, unit: unit)
   }
   

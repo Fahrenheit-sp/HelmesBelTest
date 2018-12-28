@@ -11,12 +11,21 @@ import UIKit
 final class CurrencySelectionViewController: UIViewController, TableViewBindable, StoryboardInitializable {
   
   @IBOutlet weak var tableView: UITableView!
+  @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
   var viewModel: TableViewDataSource?
+  private var model: CurrencySelectorViewModel? {
+    return viewModel as? CurrencySelectorViewModel
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()
     tableView.tableFooterView = UIView()
     tableView.register(CurrencyTableViewCell.nib, forCellReuseIdentifier: CurrencyTableViewCell.reuseIdentifier)
+    model?.getCurrenciesList(completion: { [weak self] (error) in
+      self?.activityIndicator.stopAnimating()
+      guard error == nil else {self?.showError(error); return}
+      self?.reloadData()
+    })
   }
   
 }

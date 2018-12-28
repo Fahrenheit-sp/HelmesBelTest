@@ -16,13 +16,11 @@ protocol Basket {
 
 final class ProductsBasket: Basket {
   func add(_ product: Product) {
-    defer {print("\(product) : \(products[product]!)")}
     guard let numberOfProducts = products[product] else {products[product] = 1; return}
     products[product] = numberOfProducts + 1
   }
   
   func remove(_ product: Product) {
-    defer {print("\(product) : \(products[product]!)")}
     guard let numberOfProducts = products[product] else {return}
     guard numberOfProducts > 0 else {return}
     products[product] = numberOfProducts - 1

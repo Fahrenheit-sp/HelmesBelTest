@@ -10,6 +10,6 @@ import Foundation
 
 struct Product: Hashable {
   let name: String
-  let price: Decimal
+  let price: Double
   let unit: String
 }

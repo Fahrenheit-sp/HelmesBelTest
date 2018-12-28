@@ -24,6 +24,6 @@ struct CurrencyCellViewModel: BindableCellViewModel {
   }
   
   var currencyRate: String {
-    return String(describing: currency.rate)
+    return String(format: "%.5f", currency.rate)
   }
 }

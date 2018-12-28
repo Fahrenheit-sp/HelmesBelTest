@@ -8,18 +8,12 @@
 
 import Foundation
 
-protocol Currency: Codable {
-  var quote: String {get}
-  var rate: Decimal {get}
-}
-
-extension Currency {
+struct Currency: Codable {
+  static let usd = Currency(quote: "USD", rate: 1.0)
+  let quote: String
+  let rate: Double
+  
   var name: String {
     return quote.replacingOccurrences(of: "currency.usd".localized, with: "")
   }
-}
-
-struct USD: Currency {
-  let quote: String = "USD"
-  let rate: Decimal = 1.0
 }
