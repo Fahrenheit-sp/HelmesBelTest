@@ -18,3 +18,8 @@ extension Currency {
     return quote.replacingOccurrences(of: "currency.usd".localized, with: "")
   }
 }
+
+struct USD: Currency {
+  let quote: String = "$"
+  let rate: Decimal = 1.0
+}

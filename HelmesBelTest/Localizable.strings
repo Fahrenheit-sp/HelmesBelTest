@@ -11,6 +11,7 @@
 
 /* Titles */
 "products.list" = "Products list";
+"basket" = "Basket";
 
 /* Units */
 "price.per" = " per ";

@@ -8,10 +8,15 @@
 
 import UIKit
 
-final class ProductsListViewController: UIViewController, TableViewBindable {
+final class ProductsListViewController: UIViewController, TableViewBindable, StoryboardInitializable {
+  
+  private enum SegueIdentifier: String {
+    case toBasket
+  }
   
   @IBOutlet weak var tableView: UITableView!
   var viewModel: TableViewDataSource? = ProductsListViewModel()
+  weak var coordinator: MainCoordinator?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -19,6 +24,13 @@ final class ProductsListViewController: UIViewController, TableViewBindable {
     tableView.register(ProductTableViewCell.nib, forCellReuseIdentifier: ProductTableViewCell.reuseIdentifier)
     tableView.tableFooterView = UIView()
   }
+  
+  @IBAction
+  private func proceedToCheckout(_ sender: UIBarButtonItem) {
+    guard let model = viewModel as? ProductsListViewModel else {return}
+    coordinator?.showBasket(model.basket)
+  }
+  
 }
 
 extension ProductsListViewController: UITableViewDataSource {

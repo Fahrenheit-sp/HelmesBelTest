@@ -12,7 +12,7 @@ struct ProductsListViewModel: TableViewDataSource {
   var dataSource: DataSource = ArrayDataSource(items: [])
   
   private let products: [Product]
-  private let basket: Basket
+  let basket: Basket
   
   init(with products: [Product] = ProductsFabric.getAvailableProducts(),
        basket: Basket = ProductsBasket()) {
@@ -27,11 +27,4 @@ struct ProductsListViewModel: TableViewDataSource {
     dataSource = ArrayDataSource(items: models)
   }
   
-  //  private func addProductToBasket(_ product: Product) {
-  //    basket.add(product)
-  //  }
-  //
-  //  private func removeProductFromBasket() {
-  //
-  //  }
 }

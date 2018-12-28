@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct MainCoordinator: Coordinator {
+final class MainCoordinator: Coordinator {
   var navigationController: UINavigationController
   var children: [Coordinator] = []
   
@@ -17,7 +17,16 @@ struct MainCoordinator: Coordinator {
   }
   
   func start() {
-    
+    let controller = ProductsListViewController.createInstanceFromStoryboard(named: "ProductsList")
+    controller.viewModel = ProductsListViewModel()
+    controller.coordinator = self
+    navigationController.pushViewController(controller, animated: false)
+  }
+  
+  func showBasket(_ basket: Basket) {
+    let basketController = BasketViewController.createInstanceFromStoryboard(named: "Basket")
+    basketController.viewModel = BasketViewModel(basket: basket, currency: USD())
+    navigationController.pushViewController(basketController, animated: true)
   }
   
 }

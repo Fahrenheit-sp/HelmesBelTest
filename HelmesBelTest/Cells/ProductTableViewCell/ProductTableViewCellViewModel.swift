@@ -14,8 +14,8 @@ struct ProductTableViewCellViewModel: BindableCellViewModel {
   }
   
   private let product: Product
-  private var addProductAction: (() -> Void)?
-  private var removeProductAction: (() -> Void)?
+  private(set) var addProductAction: (() -> Void)?
+  private(set) var removeProductAction: (() -> Void)?
   
   init(_ product: Product,
        addProductAction: (() -> Void)? = nil,
@@ -31,14 +31,6 @@ struct ProductTableViewCellViewModel: BindableCellViewModel {
   
   var price: String {
     return String(describing: product.price) + "price.per".localized + product.unit
-  }
-  
-  func addProduct() {
-    addProductAction?()
-  }
-  
-  func removeProduct() {
-    removeProductAction?()
   }
   
 }

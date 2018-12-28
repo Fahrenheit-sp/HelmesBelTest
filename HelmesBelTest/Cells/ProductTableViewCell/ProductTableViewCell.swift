@@ -21,8 +21,8 @@ final class ProductTableViewCell: UITableViewCell, BindableTableViewCell {
     guard let model = viewModel as? ProductTableViewCellViewModel else {return}
     nameLabel.text = model.name
     priceLabel.text = model.price
-    addAction = model.addProduct
-    removeAction = model.removeProduct
+    addAction = model.addProductAction
+    removeAction = model.removeProductAction
   }
   
   @IBAction func addButtonTap() {
