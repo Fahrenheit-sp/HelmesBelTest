@@ -12,6 +12,8 @@ final class CurrencySelectionViewController: UIViewController, TableViewBindable
   
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+  
+  weak var coordinator: MainCoordinator?
   var viewModel: TableViewDataSource?
   private var model: CurrencySelectorViewModel? {
     return viewModel as? CurrencySelectorViewModel
@@ -19,6 +21,7 @@ final class CurrencySelectionViewController: UIViewController, TableViewBindable
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    title = "currency.selection".localized
     tableView.tableFooterView = UIView()
     tableView.register(CurrencyTableViewCell.nib, forCellReuseIdentifier: CurrencyTableViewCell.reuseIdentifier)
     model?.getCurrenciesList(completion: { [weak self] (error) in
@@ -30,13 +33,18 @@ final class CurrencySelectionViewController: UIViewController, TableViewBindable
   
 }
 
-extension CurrencySelectionViewController: UITableViewDataSource {
+extension CurrencySelectionViewController: UITableViewDataSource, UITableViewDelegate {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return numberOfItems(in: section)
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     return dequeueBindedReusableCell(at: indexPath)
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    guard let currency = model?.getCurrency(at: indexPath) else { return }
+    coordinator?.finishCurrencySelection(currency)
   }
   
 }

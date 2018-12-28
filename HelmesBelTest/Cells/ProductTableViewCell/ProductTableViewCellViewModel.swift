@@ -30,7 +30,7 @@ struct ProductTableViewCellViewModel: BindableCellViewModel {
   }
   
   var price: String {
-    return String(describing: product.price) + "price.per".localized + product.unit
+    return String(describing: product.price) + " " + Currency.usd.name + "price.per".localized + product.unit
   }
   
 }

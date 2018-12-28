@@ -37,11 +37,11 @@ struct BasketTableViewCellViewModel: BindableCellViewModel {
   
   var totalPrice: String {
     let price = product.price * Double(numberOfProducts) * currency.rate
-    return String(describing: price)
+    return String(format: "%.3f", price)
   }
   
   var currencySymbol: String {
-    return currency.quote
+    return currency.name
   }
   
 }

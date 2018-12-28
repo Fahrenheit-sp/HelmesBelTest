@@ -33,7 +33,16 @@ final class MainCoordinator: Coordinator {
   func showChangeCurrency() {
     let currencyController = CurrencySelectionViewController.createInstanceFromStoryboard(named: "CurrencySelector")
     currencyController.viewModel = CurrencySelectorViewModel(service: ApiService.default)
+    currencyController.coordinator = self
     navigationController.pushViewController(currencyController, animated: true)
+  }
+  
+  func finishCurrencySelection(_ currency: Currency) {
+    let basket = navigationController.viewControllers.first {$0 is BasketViewController} as? BasketViewController
+    guard let basketModel = basket?.viewModel as? BasketViewModel else {return}
+    basketModel.changeCurrency(to: currency)
+    basket?.reloadData()
+    navigationController.popViewController(animated: true)
   }
   
 }

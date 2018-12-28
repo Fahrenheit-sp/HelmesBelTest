@@ -12,7 +12,7 @@ final class CurrencySelectorViewModel: TableViewDataSource {
   var dataSource: DataSource = ArrayDataSource(items: [])
   
   private let service: CurrencyService
-  private var currencies: [Currency] = [Currency.usd]
+  private var currencies: [Currency] = []
   
   init(service: CurrencyService = ApiService.default) {
     self.service = service
@@ -35,5 +35,9 @@ final class CurrencySelectorViewModel: TableViewDataSource {
       case .failure(let error): completion(error)
       }
     }
+  }
+  
+  func getCurrency(at indexPath: IndexPath) -> Currency {
+    return currencies[indexPath.row]
   }
 }

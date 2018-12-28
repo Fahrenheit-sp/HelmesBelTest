@@ -14,6 +14,7 @@ struct Currency: Codable {
   let rate: Double
   
   var name: String {
-    return quote.replacingOccurrences(of: "currency.usd".localized, with: "")
+    let result = quote.replacingOccurrences(of: "currency.usd".localized, with: "")
+    return result.isEmpty ? quote : result
   }
 }
