@@ -10,10 +10,6 @@ import UIKit
 
 final class ProductsListViewController: UIViewController, TableViewBindable, StoryboardInitializable {
   
-  private enum SegueIdentifier: String {
-    case toBasket
-  }
-  
   @IBOutlet weak var tableView: UITableView!
   var viewModel: TableViewDataSource? = ProductsListViewModel()
   weak var coordinator: MainCoordinator?

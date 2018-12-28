@@ -36,13 +36,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PLt-aD-EH0"/>
                     </view>
+                    <navigationItem key="navigationItem" id="AdS-Ex-u4V">
+                        <barButtonItem key="rightBarButtonItem" title="Change Currency" id="mnd-Yg-rSR">
+                            <connections>
+                                <action selector="changeCurrencyAction:" destination="33Q-kq-euc" id="LZb-4I-3tf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="23d-fg-3WE" id="2d3-Pb-L6B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hiL-Db-OpN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="159" y="143"/>
+            <point key="canvasLocation" x="1096.8" y="142.57871064467767"/>
         </scene>
     </scenes>
 </document>

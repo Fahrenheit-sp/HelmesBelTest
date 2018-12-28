@@ -20,6 +20,6 @@ extension Currency {
 }
 
 struct USD: Currency {
-  let quote: String = "$"
+  let quote: String = "USD"
   let rate: Decimal = 1.0
 }

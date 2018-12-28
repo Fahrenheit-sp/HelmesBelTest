@@ -45,20 +45,11 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Jjk-vP-TIj" id="xSH-z5-BoB"/>
-                        <segue destination="0dg-8w-rtM" kind="show" identifier="toBasket" id="f4N-mI-pYF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="958" y="-671"/>
-        </scene>
-        <!--Basket-->
-        <scene sceneID="nOj-38-fE5">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Basket" id="0dg-8w-rtM" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iH1-m7-pzj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1622" y="-671"/>
         </scene>
     </scenes>
 </document>

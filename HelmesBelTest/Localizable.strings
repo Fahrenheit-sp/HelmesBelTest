@@ -9,9 +9,14 @@
 /* Currencies */
 "currency.usd" = "USD";
 
+/* Errors */
+"error.unknownResponseFormat" = "Incorrect response format";
+"error.noData" = "No data received";
+
 /* Titles */
 "products.list" = "Products list";
 "basket" = "Basket";
+"currency.selection" = "Select Currency";
 
 /* Units */
 "price.per" = " per ";

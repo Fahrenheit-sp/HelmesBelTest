@@ -8,15 +8,24 @@
 
 import Foundation
 
-struct BasketViewModel: TableViewDataSource {
+final class BasketViewModel: TableViewDataSource {
   var dataSource: DataSource = ArrayDataSource(items: [])
   
   private let basket: Basket
-  private let currency: Currency
+  private var currency: Currency
   
   init(basket: Basket, currency: Currency) {
     self.basket = basket
     self.currency = currency
+    composeDataSource()
+  }
+  
+  func changeCurrency(to currency: Currency) {
+    self.currency = currency
+    composeDataSource()
+  }
+  
+  private func composeDataSource() {
     let products = basket.getStoredProducts()
     let models = products.map {BasketTableViewCellViewModel(product: $0, count: $1, currency: currency)}
     dataSource = ArrayDataSource(items: models)

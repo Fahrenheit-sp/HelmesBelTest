@@ -1,5 +1,5 @@
 //
-//  BasketViewController.swift
+//  CurrencySelectionViewController.swift
 //  HelmesBelTest
 //
 //  Created by Игорь Майсюк on 12/28/18.
@@ -8,26 +8,20 @@
 
 import UIKit
 
-final class BasketViewController: UIViewController, TableViewBindable, StoryboardInitializable {
+final class CurrencySelectionViewController: UIViewController, TableViewBindable, StoryboardInitializable {
   
   @IBOutlet weak var tableView: UITableView!
   var viewModel: TableViewDataSource?
-  weak var coordinator: MainCoordinator?
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    title = "basket".localized
     tableView.tableFooterView = UIView()
-    tableView.register(BasketTableViewCell.nib, forCellReuseIdentifier: BasketTableViewCell.reuseIdentifier)
-  }
-  
-  @IBAction func changeCurrencyAction(_ sender: UIBarButtonItem) {
-    coordinator?.showChangeCurrency()
+    tableView.register(CurrencyTableViewCell.nib, forCellReuseIdentifier: CurrencyTableViewCell.reuseIdentifier)
   }
   
 }
 
-extension BasketViewController: UITableViewDataSource {
+extension CurrencySelectionViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return numberOfItems(in: section)
   }
