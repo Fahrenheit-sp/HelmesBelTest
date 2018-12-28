@@ -20,11 +20,9 @@ final class ApiService {
   private init() {}
   
   func perform<T: Decodable>(_ request: URLRequest, completion: @escaping (Result<T>) -> Void) {
-  //  let session =
     session.dataTask(with: request) { (data, _, error) in
       guard error == nil else {return completion(.failure(error!))}
       guard let data = data else {return completion(.failure(ApiError.noData))}
-      print(String(data: data, encoding: .utf8))
       do {
         let result: T = try ResponseDecoder.decode(from: data)
         completion(.success(result))

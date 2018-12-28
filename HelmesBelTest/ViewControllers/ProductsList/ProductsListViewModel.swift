@@ -9,7 +9,7 @@
 import Foundation
 
 struct ProductsListViewModel: TableViewDataSource {
-  var dataSource: DataSource = ArrayDataSource(items: [])
+  private(set) var dataSource: DataSource = ArrayDataSource(items: [])
   
   private let products: [Product]
   let basket: Basket

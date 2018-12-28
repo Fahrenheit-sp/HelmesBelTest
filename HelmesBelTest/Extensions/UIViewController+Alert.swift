@@ -16,9 +16,7 @@ extension UIViewController {
   
   func showAlert(title: String?, message: String?, acceptActionHandler: (() -> Void)? = nil) {
     let controller = UIAlertController(title: title, message: message, preferredStyle: .alert)
-    let okAction = UIAlertAction(title: "common.ok".localized, style: .default, handler: { _ in
-      acceptActionHandler?()
-    })
+    let okAction = UIAlertAction(title: "common.ok".localized, style: .default, handler: { _ in acceptActionHandler?() })
     controller.addAction(okAction)
     present(controller, animated: true, completion: nil)
   }

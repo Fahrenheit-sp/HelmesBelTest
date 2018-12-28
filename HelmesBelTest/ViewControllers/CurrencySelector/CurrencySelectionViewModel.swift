@@ -9,7 +9,7 @@
 import Foundation
 
 final class CurrencySelectorViewModel: TableViewDataSource {
-  var dataSource: DataSource = ArrayDataSource(items: [])
+  private(set) var dataSource: DataSource = ArrayDataSource(items: [])
   
   private let service: CurrencyService
   private var currencies: [Currency] = []
